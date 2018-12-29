@@ -1,6 +1,5 @@
 # thewire-websitecards
 
-
 Attaches rich website preview cards to wire posts, similar to Twitter cards. The card will appear when a URL is mentioned in a wire post, and there is OpenGraph metadata attached to the URL with an image.
 
 -   Cards appear on both "The Wire" and "River" feeds.
