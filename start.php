@@ -4,10 +4,9 @@ elgg_register_event_handler('init', 'system', 'twog_init');
 
 function twog_init() {
 
+    elgg_extend_view('twrc/card', 'twwc/card');
 
-    elgg_extend_view('object/thewire', 'card/thewire');
-    elgg_extend_view('river/elements/body', 'card/river');
-    elgg_extend_view('elgg.css', 'card/css');
+    elgg_extend_view('elgg.css', 'twwc/css');
     
     if (elgg_get_plugin_setting('opengraph_api_key', 'thewire-websitecards') == null) {
      
@@ -19,7 +18,7 @@ function twog_init() {
     
     if (elgg_get_plugin_setting('card_css_class', 'thewire-websitecards') == null) {
         
-        elgg_set_plugin_setting('card_css_class', 'wire-preview-card', 'thewire-websitecards');
+        elgg_set_plugin_setting('card_css_class', 'twc', 'thewire-websitecards');
         
     }
 

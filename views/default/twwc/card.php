@@ -2,6 +2,8 @@
 
 $post_text = $vars['text'];
 
+$entity = $vars['entity'];
+
 preg_match_all('#\bhttps?://[^,\s()<>]+(?:\([\w\d]+\)|([^,[:punct:]\s]|/))#', $post_text, $urls);
 
 $use_api = false;
@@ -48,17 +50,15 @@ if (count($urls[0]) > 0) {
 
     ?>
     <?php if ($image_url != null) { ?>
-    <div class="<?php echo elgg_get_plugin_setting('card_css_class', 'thewire-websitecards'); ?>">
+    <div class="twrc-card <?php echo elgg_get_plugin_setting('card_css_class', 'thewire-websitecards'); ?>">
       <div class="item"><a title="<?php echo $title; ?>" href="<?php echo $url_to_use; ?>" target="_BLANK"><img src ="<?php echo $image_url; ?>" style="width: 98%;"></a></div> 
       <div class="item">
       	<h3><a title="<?php echo $title; ?>" href="<?php echo $url_to_use; ?>" target="_BLANK"><?php echo $title; ?></a></h3>
-      	<p><?php echo $description; ?></p>
-      	<p><a title="<?php echo elgg_echo('thewire-websitecards:readmore'); ?>" href="<?php echo $url_to_use; ?>"><?php echo elgg_echo('thewire-websitecards:readmore'); ?></a></p>
+      	<p class="description"><?php echo $description; ?></p>
+      	<p class="link"><a title="<?php echo elgg_echo('thewire-websitecards:readmore'); ?>" href="<?php echo $url_to_use; ?>"><?php echo elgg_echo('thewire-websitecards:readmore'); ?></a></p>
       </div>
     </div>
-    <br /><br />
     <?php } ?>
     <?php
-    
     }
     ?>
