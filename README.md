@@ -6,6 +6,8 @@ Attaches rich website preview cards to wire posts, similar to Twitter cards. The
 -   Support for OpenGraph.io API, or self-hosted OpenGraph finder by scottmac.
 -   Support for custom card styling.
 
-Also, I'm super pumped to be creating elgg plugins again! Would love to hear your feedback :)
+**Note:** This plugin requires the "[The Wire Rich Content](https://elgg.org/plugins/2929050)" plugin.
+
+I'm super pumped to be creating elgg plugins again! Would love to hear your feedback :)
 
 [View the plugin on the Elgg Community!](https://elgg.org/plugins/2865107)
